@@ -71,7 +71,7 @@ class TweetController extends Controller
         $content = $connection->get("account/verify_credentials");
         $statuses = $connection->get("statuses/home_timeline", ["count" => 10, "exclude_replies" => true]);
         // $statuses[0]->text;
-        return $this->successResponse($statuses->text);
+        return $this->successResponse($statuses);
 
     }
 
